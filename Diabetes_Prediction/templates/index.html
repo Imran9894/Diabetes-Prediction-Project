@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Diabetes check</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Home Page</h1>
+    </div>
+    <div class="container">
+    <a href="{{url_for('check_diabetes')}}">check diabetes</a>
+        <!-- callling a python function -->
+        <!-- instead you give "/addUsers" -->
+    {% if data %}
+        
+            <table border="2px"  style=" border-collapse: collapse;">
+                <tr><th>Name</th>
+                    <th>Problem</th>
+                    <th>Status</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>{{data[0]}}</td>
+                    <td>Diabetes</td>
+                    {% if data[1]==1 %}
+                        <td >Positive</td>
+                        <td style="background-color: red;">Danger</td>
+                    {% endif %}
+                    {% if data[1]==0 %}
+                        <td>Negative</td>
+                        <td style="background-color: green;">Good</td>
+                    {% endif %}
+                </tr>
+            </table>
+    {% endif %}
+    </div>
+</body>
+<html>

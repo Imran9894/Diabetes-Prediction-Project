@@ -1,0 +1,61 @@
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <style>
+        h1{
+    background-color: aquamarine;
+    text-align: center;
+    height: 10%;
+    border-bottom: 5px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Diabetes Form</h1>
+<div class="form">
+    
+    
+<form action="/check_diabetes" method="post">
+    <fieldset>
+        <legend>Enter Details</legend>
+    <label for="">Name:</label>
+    <input type="text" name="name" autocomplete="off" required>
+    <br>
+    <label for="">Gender:</label>
+    <input type="radio" value="1" name="gender">Male &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="radio" value="0" name="gender">Female
+    <br>
+    <label for="" >Age:</label>
+    <input type="number" name="age" autocomplete="off" required>
+    <br>
+    <label for="" >BPMeds:</label>
+    <input type="number" name="BPMeds" required>
+    <br>
+    <label for="" >SysBP:</label>
+    <input type="number" name="sysBP" required>
+    <br>
+    <label for="" >DiaBP:</label>
+    <input type="number" name="diaBP" required>
+    <br>
+    <label for="" >BMI:</label>
+    <input type="number" name="BMI" required>
+    <br>
+    <label for="" >HeartRate:</label>
+    <input type="number" name="heartRate" required>
+    <br>
+    <label for="" >Glucose:</label>
+    <input type="number" name="glucose" required>
+    <br>
+    <input type="submit" value="Check">
+    <input type="reset" value="Reset">
+</fieldset>
+</form>
+
+</div>
+</body>
+
+
+<html>
